@@ -17,7 +17,7 @@ red = 255, 0, 0
 loading = Loading()
 load_marker = 0     # 0 - нужно отобразить стартовый экран, 1 - до игры, 2 - во время игры
 
-menu = Main_menu()
+menu = Main_menu(main_window)
 menu_marker = 0
 
 keys = pygame.key.get_pressed()
@@ -28,13 +28,11 @@ while True:
 
     for event in pygame.event.get():
 
-        if pygame.key.get_pressed()[pygame.K_f] and load_marker == 1:
+        if pygame.key.get_pressed()[pygame.K_f]:
             exit()
 
     if load_marker == 0:
-        loading.one_step(main_window)
-        loading.second_step(main_window)
-        load_marker = 1
+        menu.on_menu()
 
     pygame.display.flip()
     clock.tick(fps)
