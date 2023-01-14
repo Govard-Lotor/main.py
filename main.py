@@ -31,8 +31,6 @@ while True:
         if pygame.key.get_pressed()[pygame.K_f]:
             exit()
 
-    if load_marker == 0:
-        menu.on_menu()
 
     pygame.display.flip()
     clock.tick(fps)
