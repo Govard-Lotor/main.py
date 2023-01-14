@@ -4,6 +4,9 @@ from loading_screen import Loading
 from main_menu import Main_menu
 pygame.init()
 
+def nothing():
+    pass
+
 main_window = pygame.display.set_mode((1920, 1080))
 
 fps = 60
